@@ -46,9 +46,6 @@ heart-disease-prediction/
 ├── home.png
 └── prediction.png
 
-yaml
-Copy code
-
 ---
 
 ## 🧪 Input Features
@@ -95,20 +92,23 @@ Categorical features are automatically **one-hot encoded** inside the applicatio
 ## ▶️ Run the Application Locally
 
 ```bash
+Step 1: Clone the repository
 git clone https://github.com/harsh925-prog/Heart-Disease-Prediction.git
 cd Heart-Disease-Prediction
+
+Step 2: Install dependencies
 pip install -r requirements.txt
+
+Step 3: Start the Streamlit app
 streamlit run app.py
-☁️ Deployment
+```
+
+## ☁️ Deployment
 The application is deployed using Streamlit Community Cloud.
-
 Platform: Streamlit Community Cloud
-
 Source Control: GitHub
-
 Deployment Type: Public Web App
-
 Auto-redeploy on GitHub push: Enabled
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 This project is for educational purposes only and should not be used for medical diagnosis.
