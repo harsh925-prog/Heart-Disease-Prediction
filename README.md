@@ -7,7 +7,8 @@ The model uses **Logistic Regression** for binary classification and achieves an
 ---
 
 🚀 Live Demo
-👉 Add your Streamlit Cloud URL here after deployment
+👉 https://heart-disease-prediction-trs56pdvcaceughdshbquu.streamlit.app/
+
 
 ---
 
@@ -90,4 +91,5 @@ Step 2: Install dependencies
 pip install -r requirements.txt
 
 Step 3: Start the Streamlit app
+
 streamlit run app.py
