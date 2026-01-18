@@ -7,21 +7,25 @@ scaler = joblib.load("scaler.pkl")
 expected_columns = joblib.load("columns.pkl")
 
 st.title("Heart Disease Prediction")
-st.markdown("Provide the following details:")
 
-age = st.slider("Age", 18, 100, 40)
-sex = st.selectbox("Sex", ["M", "F"])
-chest_pain = st.selectbox("Chest Pain Type", ["ATA", "NAP", "TA", "ASY"])
-restingBP = st.number_input("Resting Blood Pressure (mm Hg)", 80, 200, 120)
-cholesterol = st.number_input("Cholesterol (mg/dL)", 100, 600, 200)
-fastingBS = st.selectbox("Fasting Blood Sugar", [0, 1])
-resting_ecg = st.selectbox("Resting ECG", ["Normal", "ST", "LVH"])
-max_hr = st.slider("Max Heart Rate", 60, 220, 150)
-exercise_angina = st.selectbox("Exercise-Induced Angina", ["Y", "N"])
-oldpeak = st.slider("Oldpeak (ST Depression)", 0.0, 6.0, 1.0)
-st_slope = st.selectbox("ST Slope", ["Up", "Flat", "Down"])
+with st.form("heart_form"):
+    st.subheader("Enter patient details")
 
-if st.button("Predict"):
+    age = st.slider("Age", 18, 100, 40)
+    sex = st.selectbox("Sex", ["M", "F"])
+    chest_pain = st.selectbox("Chest Pain Type", ["ATA", "NAP", "TA", "ASY"])
+    restingBP = st.number_input("Resting Blood Pressure", 80, 200, 120)
+    cholesterol = st.number_input("Cholesterol", 100, 600, 200)
+    fastingBS = st.selectbox("Fasting Blood Sugar", [0, 1])
+    resting_ecg = st.selectbox("Resting ECG", ["Normal", "ST", "LVH"])
+    max_hr = st.slider("Max Heart Rate", 60, 220, 150)
+    exercise_angina = st.selectbox("Exercise-Induced Angina", ["Y", "N"])
+    oldpeak = st.slider("Oldpeak", 0.0, 6.0, 1.0)
+    st_slope = st.selectbox("ST Slope", ["Up", "Flat", "Down"])
+
+    submit = st.form_submit_button("Predict")
+
+if submit:
     raw_input = {
         "Age": age,
         "RestingBP": restingBP,
