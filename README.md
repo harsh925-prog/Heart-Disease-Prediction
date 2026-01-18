@@ -1,4 +1,4 @@
-❤️ Heart Disease Prediction using Logistic Regression
+# ❤️ Heart Disease Prediction using Logistic Regression
 
 This project is a **Machine Learning web application** built with **Streamlit** that predicts the **risk of heart disease** based on clinical and lifestyle parameters entered by the user.
 
@@ -6,12 +6,12 @@ The model uses **Logistic Regression** for binary classification and achieves an
 
 ---
 
-🚀 Live Demo
-👉 Add your Streamlit Cloud URL here after deployment
+## 🚀 Live Demo
+👉 https://heart-disease-prediction-trs56pdvcaceughdshbquu.streamlit.app/
 
 ---
 
-📌 Project Overview
+## 📌 Project Overview
 
 Heart disease is one of the leading causes of death worldwide. Early detection plays a critical role in preventing severe health outcomes.  
 This application helps estimate the **likelihood of heart disease** using patient medical data through an easy-to-use web interface.
@@ -20,7 +20,7 @@ This project is intended for **educational and demonstration purposes**.
 
 ---
 
-🧠 Machine Learning Model
+## 🧠 Machine Learning Model
 
 - **Algorithm**: Logistic Regression  
 - **Problem Type**: Binary Classification  
@@ -32,23 +32,26 @@ This project is intended for **educational and demonstration purposes**.
 
 ---
 
-🗂️ Project Structure
+## 🗂️ Project Structure
 
 heart-disease-prediction/
 │
-├── app.py # Streamlit web application
-├── model.pkl # Trained Logistic Regression model
-├── scaler.pkl # Feature scaler used during training
-├── columns.pkl # Expected feature order
-├── requirements.txt # Required Python packages
-└── README.md # Project documentation
+├── app.py
+├── model.pkl
+├── scaler.pkl
+├── columns.pkl
+├── requirements.txt
+├── README.md
+└── screenshots/
+├── home.png
+└── prediction.png
 
+yaml
+Copy code
 
 ---
 
-🧪 Input Features
-
-The following medical parameters are used for prediction:
+## 🧪 Input Features
 
 - Age  
 - Sex (M / F)  
@@ -66,12 +69,12 @@ Categorical features are automatically **one-hot encoded** inside the applicatio
 
 ---
 
-⚙️ How the Application Works
+## ⚙️ How the Application Works
 
-1. User enters health-related details via the Streamlit interface  
-2. Inputs are transformed to match the training feature format  
-3. Missing columns are added using stored metadata  
-4. Data is scaled using the saved scaler  
+1. User enters medical details through the Streamlit interface  
+2. Inputs are converted to the expected feature format  
+3. Missing columns are added using `columns.pkl`  
+4. Data is scaled using `scaler.pkl`  
 5. Logistic Regression model predicts the result  
 6. Output is displayed as:
    - **High Risk of Heart Disease**
@@ -79,15 +82,33 @@ Categorical features are automatically **one-hot encoded** inside the applicatio
 
 ---
 
-▶️ Run the Application Locally
+## 📸 Application Screenshots
 
-Step 1: Clone the repository
+### Input Form
+![Input Form](screenshots/home.png)
+
+### Prediction Result
+![Prediction Result](screenshots/prediction.png)
+
+---
+
+## ▶️ Run the Application Locally
+
 ```bash
-git clone https://github.com/your-username/heart-disease-prediction.git
-cd heart-disease-prediction
-
-Step 2: Install dependencies
+git clone https://github.com/harsh925-prog/Heart-Disease-Prediction.git
+cd Heart-Disease-Prediction
 pip install -r requirements.txt
-
-Step 3: Start the Streamlit app
 streamlit run app.py
+☁️ Deployment
+The application is deployed using Streamlit Community Cloud.
+
+Platform: Streamlit Community Cloud
+
+Source Control: GitHub
+
+Deployment Type: Public Web App
+
+Auto-redeploy on GitHub push: Enabled
+
+⚠️ Disclaimer
+This project is for educational purposes only and should not be used for medical diagnosis.
