@@ -42,7 +42,10 @@ heart-disease-prediction/
 ├── scaler.pkl # Feature scaler used during training
 ├── columns.pkl # Expected feature order
 ├── requirements.txt # Required Python packages
-└── README.md # Project documentation
+├── README.md # Project documentation
+└── screenshots
+    ├── input.png
+    └── prediction.png
 
 
 ---
@@ -91,5 +94,14 @@ Step 2: Install dependencies
 pip install -r requirements.txt
 
 Step 3: Start the Streamlit app
-
 streamlit run app.py
+```
+
+☁️ Deployment
+
+The application is deployed using **Streamlit Community Cloud**.
+
+- Platform: Streamlit Community Cloud
+- Source Control: GitHub
+- Deployment Type: Public Web App
+- Auto-redeploy on GitHub push: Enabled
